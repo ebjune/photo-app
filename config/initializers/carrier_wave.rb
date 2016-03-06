@@ -3,9 +3,9 @@ if Rails.env.production?
     config.storage    = :aws
     config.aws_bucket = ENV.fetch('S3_BUCKET')
     config.aws_acl    = 'public-read'
-    
+
    config.aws_credentials = {
-     access_key_id:     ENV.fetch('S3_ACCESS_KEY_ID'),
+     access_key_id:     ENV.fetch('S3_ACCESS_KEY'),
      secret_access_key: ENV.fetch('S3_SECRET_KEY'),
      region:            ENV.fetch('AWS_REGION') # Required 'Oregon'
    }
